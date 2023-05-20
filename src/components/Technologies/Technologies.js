@@ -46,7 +46,7 @@ const Technologies = () => (
       </ListItem>
 
       <ListItem>
-        <FiFigma size="2rem" />
+        <FiFigma size="3rem" />
         <ListContainer>
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
