@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
-import { DiCssdeck } from "react-icons/di";
 
 import {
   Container,
@@ -26,7 +25,7 @@ const Header = () => (
             marginBottom: "20px",
           }}
         >
-          <DiCssdeck size="3rem" /> <Span>Sandip</Span>
+          <Span>Sandip</Span>
         </a>
       </Link>
     </Div1>

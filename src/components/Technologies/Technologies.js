@@ -1,5 +1,5 @@
 import React from "react";
-import { DiFirebase, DiReact } from "react-icons/di";
+import { DiReact, DiNodejsSmall } from "react-icons/di";
 import { FiFigma } from "react-icons/fi";
 import {
   Section,
@@ -30,27 +30,27 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Frontend</ListTitle>
           <ListParagraph>
-            Experience with <br /> React and Next
+            Experience with <br /> React and Frontend Technologies.
           </ListParagraph>
         </ListContainer>
       </ListItem>
 
       <ListItem>
-        <DiFirebase size="3rem" />
+        <DiNodejsSmall size="3rem" />
         <ListContainer>
           <ListTitle>Backend</ListTitle>
           <ListParagraph>
-            Experience with <br /> Spring Boot and databases
+            Experience with <br /> Express and mongoDB.
           </ListParagraph>
         </ListContainer>
       </ListItem>
 
       <ListItem>
-        <FiFigma size="3rem" />
+        <FiFigma size="2rem" />
         <ListContainer>
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
-            Familiar with <br /> tools like Figma
+            Familiar with <br /> tools like Figma.
           </ListParagraph>
         </ListContainer>
       </ListItem>

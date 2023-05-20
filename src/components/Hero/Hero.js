@@ -8,8 +8,16 @@ import {
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 
-const mailTo = () => {
-  location.href = "mailto:sandipdeb05@gmail.com";
+const onButtonClick = () => {
+  fetch("sandip-resume.pdf").then((response) => {
+    response.blob().then((blob) => {
+      const fileURL = window.URL.createObjectURL(blob);
+      let alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = "sandip-resume.pdf";
+      alink.click();
+    });
+  });
 };
 
 const Hero = () => (
@@ -20,10 +28,10 @@ const Hero = () => (
         <br />I am Sandip Deb
       </SectionTitle>
       <SectionText>
-        A Full-Stack Developer mainly focusing on Frontend Technologies like
-        React, Redux, Next, and many more...
+        A Full-Stack Developer focusing on JavaScript, React, Redux, Next, MERN
+        Stack and many more...
       </SectionText>
-      <Button onClick={mailTo}>Email Now</Button>
+      <Button onClick={onButtonClick}>Download resume</Button>
     </LeftSection>
   </Section>
 );

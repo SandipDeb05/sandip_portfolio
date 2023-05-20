@@ -67,12 +67,17 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        I am Sandip Deb, a Full Stack developer trainee at Xopuntech India Pvt.
-        Ltd. <br />
-        Mainly I am focusing on Front-end Technologies like JavaScript, React,
-        and Next, also I am a Team player who can manage and lead a project.
-        <br />
-        Technology Stack: JavaScript, React, Redux, Next, Java, Spring Boot.
+        As a highly skilled full-stack developer, I specialize in ReactJS and
+        the MERN stack, which includes MongoDB, Express, React, and Node. With
+        years of experience in software development, I have honed my expertise
+        in creating dynamic and responsive web applications using these
+        technologies.I am always learning and expanding my knowledge of new
+        technologies and industry best practices to ensure that my clients get
+        the best solutions possible. If you're looking for a highly skilled and
+        motivated developer with experience in the MERN stack and full-stack
+        development, I am the right person for the job. <br />
+        Technology Stack: JavaScript, React, Redux, React-Router, Next,
+        TypeScript, MERN.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
