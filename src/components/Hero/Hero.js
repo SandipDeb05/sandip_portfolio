@@ -31,7 +31,7 @@ const Hero = () => (
         A Full-Stack Developer focusing on JavaScript, React, Redux, Next, MERN
         Stack and many more...
       </SectionText>
-      <Button onClick={onButtonClick}>Download resume</Button>
+      <Button onClick={onButtonClick}>Download Resume</Button>
     </LeftSection>
   </Section>
 );
