@@ -1,152 +1,34 @@
-import React, { useState, useRef, useEffect } from "react";
-
-import {
-  CarouselButton,
-  CarouselButtonDot,
-  CarouselButtons,
-  CarouselContainer,
-  CarouselItem,
-  CarouselItemImg,
-  CarouselItemText,
-  CarouselItemTitle,
-  CarouselMobileScrollNode,
-} from "./TimeLineStyles";
+import React from "react";
 import {
   Section,
-  SectionDivider,
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import { TimeLineData } from "../../constants/constants";
-
-const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
 const Timeline = () => {
-  const [activeItem, setActiveItem] = useState(0);
-  const carouselRef = useRef();
-
-  const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: "smooth" });
-  };
-
-  const handleClick = (e, i) => {
-    e.preventDefault();
-
-    if (carouselRef.current) {
-      const scrollLeft = Math.floor(
-        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
-      );
-
-      scroll(carouselRef.current, scrollLeft);
-    }
-  };
-
-  const handleScroll = () => {
-    if (carouselRef.current) {
-      const index = Math.round(
-        (carouselRef.current.scrollLeft /
-          (carouselRef.current.scrollWidth * 0.7)) *
-          TimeLineData.length
-      );
-
-      setActiveItem(index);
-    }
-  };
-
-  // snap back to beginning of scroll when window is resized
-  // avoids a bug where content is covered up if coming from smaller screen
-  useEffect(() => {
-    const handleResize = () => {
-      scroll(carouselRef.current, 0);
-    };
-
-    window.addEventListener("resize", handleResize);
-  }, []);
-
   return (
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        As a highly skilled full-stack developer, I specialize in ReactJS and
-        the MERN stack, which includes MongoDB, Express, React, and Node. With
-        years of experience in software development, I have honed my expertise
-        in creating dynamic and responsive web applications using these
-        technologies.I am always learning and expanding my knowledge of new
-        technologies and industry best practices to ensure that my clients get
-        the best solutions possible. If you're looking for a highly skilled and
-        motivated developer with experience in the MERN stack and full-stack
-        development, I am the right person for the job. <br />
-        Technology Stack: JavaScript, React, Redux, React-Router, Next,
-        TypeScript, MERN.
+        I specialize in React and the MERN stack, which includes MongoDB,
+        Express, React, and Node. With years of experience in software
+        development, I have honed my expertise in creating dynamic and
+        responsive web applications using these technologies. In my current role
+        with a startup company, I am working in a small team to develop a React
+        project from scratch, which allowed me to enhance my knowledge of the
+        React ecosystem and JavaScript. I am passionate about building
+        innovative and efficient applications that meet the specific needs of my
+        clients. I have a proven track record of developing top-quality web
+        applications and managing projects from conception to launch. My
+        technical proficiency, combined with my ability to work effectively in a
+        team, enables me to create solutions that are scalable, secure, and
+        high-performing. I am always learning and expanding my knowledge of new
+        technologies and industry best practices. If you're looking for a
+        skilled and motivated developer with experience in the MERN stack and
+        full-stack development, I am the right person for the job. <br />
+        Technology Stack: HTML, CSS, JavaScript, React, Redux, React-Router,
+        Next, MERN stack.
       </SectionText>
-      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        <>
-          {TimeLineData.map((item, index) => (
-            <CarouselMobileScrollNode
-              key={index}
-              final={index === TOTAL_CAROUSEL_COUNT - 1}
-            >
-              <CarouselItem
-                index={index}
-                id={`carousel__item-${index}`}
-                active={activeItem}
-                onClick={(e) => handleClick(e, index)}
-              >
-                <CarouselItemTitle>
-                  {item.year}
-                  <CarouselItemImg
-                    width="208"
-                    height="6"
-                    viewBox="0 0 208 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M2.5 5.5C3.88071 5.5 5 4.38071 5 3V3.5L208 3.50002V2.50002L5 2.5V3C5 1.61929 3.88071 0.5 2.5 0.5C1.11929 0.5 0 1.61929 0 3C0 4.38071 1.11929 5.5 2.5 5.5Z"
-                      fill="url(#paint0_linear)"
-                      fillOpacity="0.33"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear"
-                        x1="-4.30412e-10"
-                        y1="0.5"
-                        x2="208"
-                        y2="0.500295"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stopColor="white" />
-                        <stop
-                          offset="0.79478"
-                          stopColor="white"
-                          stopOpacity="0"
-                        />
-                      </linearGradient>
-                    </defs>
-                  </CarouselItemImg>
-                </CarouselItemTitle>
-                <CarouselItemText>{item.text}</CarouselItemText>
-              </CarouselItem>
-            </CarouselMobileScrollNode>
-          ))}
-        </>
-      </CarouselContainer>
-      <CarouselButtons>
-        {TimeLineData.map((item, index) => (
-          <CarouselButton
-            key={index}
-            index={index}
-            active={activeItem}
-            onClick={(e) => handleClick(e, index)}
-            type="button"
-          >
-            <CarouselButtonDot active={activeItem} />
-          </CarouselButton>
-        ))}
-      </CarouselButtons>
-      {/* <SectionDivider /> */}
     </Section>
   );
 };
