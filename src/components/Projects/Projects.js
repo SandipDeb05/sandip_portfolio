@@ -55,7 +55,7 @@ const Projects = () => (
                 target={"_blank"}
                 rel={"noopener noreferrer"}
               >
-                Code
+                Github
               </ExternalLinks>
             </UtilityList>
           </BlogCard>
