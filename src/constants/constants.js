@@ -1,5 +1,15 @@
 export const projects = [
   {
+    title: "Datacore js",
+    description:
+      "Datacorejs is a JavaScript library that provides a collection of commonly used data structures to simplify your development tasks. Whether you're working on algorithms or data manipulation, this package has you covered.",
+    image: "/images/npm.jpeg",
+    tags: ["JavaScript", "NPM"],
+    source: "https://github.com/SandipDeb05/datacorejs",
+    visit: "https://www.npmjs.com/package/datacorejs",
+    id: 0,
+  },
+  {
     title: "Gaming Dice",
     description:
       "This project is all about selling PlayStation 5 games, built with modern design, animations, and the ability to add and edit products on the go using a CMS, and all advanced cart functionalities.",
@@ -7,7 +17,7 @@ export const projects = [
     tags: ["Next", "React", "Sanity", "Stripe"],
     source: "https://github.com/SandipDeb05/gamingdice",
     visit: "https://gamingdice.vercel.app/",
-    id: 0,
+    id: 1,
   },
   {
     title: "The Movie Tone",
@@ -17,7 +27,7 @@ export const projects = [
     tags: ["React", "JavaScript", "OMDb API"],
     source: "https://github.com/SandipDeb05/the-movie-tone",
     visit: "https://themovietone.netlify.app/",
-    id: 1,
+    id: 2,
   },
 ];
 

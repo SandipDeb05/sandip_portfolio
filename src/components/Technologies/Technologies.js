@@ -21,8 +21,8 @@ const Technologies = () => (
     <br />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I've worked with a range of Technologies in the Web Development world from
-      Frontend to Backend.
+      I have extensive experience in web development, specializing in frontend
+      technologies.
     </SectionText>
     <List>
       <ListItem>
@@ -40,7 +40,7 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Backend</ListTitle>
           <ListParagraph>
-            Experience with <br /> Express and mongoDB.
+            Knowledge of <br /> Express and mongoDB.
           </ListParagraph>
         </ListContainer>
       </ListItem>

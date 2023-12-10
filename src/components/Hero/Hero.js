@@ -28,8 +28,9 @@ const Hero = () => (
         <br />I am Sandip Deb
       </SectionTitle>
       <SectionText>
-        A Full-Stack Developer focusing on JavaScript, React, Redux, Next, MERN
-        Stack and many more...
+        Experienced software developer specializing in JavaScript and React.
+        Proficient in crafting dynamic and responsive web applications through
+        years of expertise in software development.
       </SectionText>
       <Button onClick={onButtonClick}>Download Resume</Button>
     </LeftSection>
