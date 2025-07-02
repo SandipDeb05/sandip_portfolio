@@ -9,12 +9,12 @@ import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 
 const onButtonClick = () => {
-  fetch("SandipDebResume.pdf").then((response) => {
+  fetch("sandip-resume.pdf").then((response) => {
     response.blob().then((blob) => {
       const fileURL = window.URL.createObjectURL(blob);
       let alink = document.createElement("a");
       alink.href = fileURL;
-      alink.download = "SandipDebResume.pdf";
+      alink.download = "sandip-resume.pdf";
       alink.click();
     });
   });
