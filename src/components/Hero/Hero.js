@@ -9,7 +9,7 @@ import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 
 const onButtonClick = () => {
-  fetch("sandip-resume.pdf").then((response) => {
+  fetch("sandip_deb_resume.pdf").then((response) => {
     response.blob().then((blob) => {
       const fileURL = window.URL.createObjectURL(blob);
       let alink = document.createElement("a");
